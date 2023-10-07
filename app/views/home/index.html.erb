@@ -1,19 +1,19 @@
 <div class="d-flex justify-content-between p-4 py-2">
   <div class="">
-    <h1>UnlockedFlix</h1>
+    <%= image_tag "logo_unlockedflix.png", alt: "logotype"%>
   </div>
   <div class="d-flex gap-4 align-items-center">
-    <%= link_to "Sign up", new_user_registration_path, class:"d-flex" %>
-    <%= link_to "Sign in", user_session_path, class:"d-flex" %>
+    <%= link_to "Sign up", new_user_registration_path, class:"btn-signup" %>
+    <%= link_to "Sign in", user_session_path, class:"btn-signin" %>
   </div>
 </div>
-<section>
+<section class="banner">
   <%= image_tag "banner.jpg", alt: "banner marvel", class:"banner-img" %>
 </section>
 <section id="trending">
   <div class="d-flex row justify-content-between p-3">
     <div class="p-3">
-      <h2 class="p-3">Categories</h2>
+      <h2 class="p-4">Categories</h2>
       <%# <div class="d-flex gap-2 align-items-center">
         <i class="fa-solid fa-chevron-right"></i>
       </div> %>
@@ -21,17 +21,17 @@
     
     <div>
       <ul class="d-flex gap-4">
-          <li class="btn btn-warning px-2">Romance</li>
-          <li class="btn btn-warning px-2">Science Fiction</li>
-          <li class="btn btn-warning px-2">Mystery</li>
-          <li class="btn btn-warning px-2">Adventure</li>
-          <li class="btn btn-warning px-2">Fantasy</li>
-          <li class="btn btn-warning px-2">Thriller</li>
-          <li class="btn btn-warning px-2">Historical Fiction</li>
-          <li class="btn btn-warning px-2">Dystopian</li>
-          <li class="btn btn-warning px-2">Biography</li>
-          <li class="btn btn-warning px-2">Horror</li>
-          <li class="btn btn-warning px-2">Animation</li>
+          <li class="btn-categories">Romance</li>
+          <li class="btn-categories">Science Fiction</li>
+          <li class="btn-categories">Mystery</li>
+          <li class="btn-categories">Adventure</li>
+          <li class="btn-categories">Fantasy</li>
+          <li class="btn-categories">Thriller</li>
+          <li class="btn-categories">Historical Fiction</li>
+          <li class="btn-categories">Dystopian</li>
+          <li class="btn-categories">Biography</li>
+          <li class="btn-categories">Horror</li>
+          <li class="btn-categories">Animation</li>
       </ul>
     </div>
   </div>

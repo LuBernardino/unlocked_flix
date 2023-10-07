@@ -1,0 +1,37 @@
+.btn-categories {
+    background-color: #FF6464;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 8px;
+    list-style: none;
+}
+
+.btn-signin {
+    background-color: #FF6464;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all .4s;
+    font-weight: 600;
+
+    &:hover {
+        transform: scale(1.10);
+    }
+}
+
+.btn-signup {
+    background-color: none;
+    color: #FF6464;
+    padding: 10px 15px;
+    border: 1px solid #FF6464;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all .4s;
+
+    &:hover {
+        background-color: #FF6464;
+        color: black;
+        font-weight: 600;
+    }
+}
