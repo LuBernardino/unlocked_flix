@@ -1,0 +1,6 @@
+.custom-text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Número de linhas desejado */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
