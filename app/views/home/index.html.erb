@@ -1,19 +1,10 @@
-<div class="d-flex justify-content-between p-4 py-2">
-  <div class="p-2">
-    <%= image_tag "logo_unlockedflix.png", alt: "logotype"%>
-  </div>
-  <div class="d-flex gap-4 align-items-center">
-    <%= link_to "Sign up", new_user_registration_path, class:"btn-signup" %>
-    <%= link_to "Sign in", user_session_path, class:"btn-signin" %>
-  </div>
-</div>
 <section class="banner">
   <%= image_tag "banner.jpg", alt: "banner marvel", class:"banner-img" %>
 </section>
 <section id="trending">
   <div class="d-flex row justify-content-between p-3">
     <div class="p-3">
-      <h2 class="p-4">Categories</h2>
+      <h2 class="p-4 txt-title">Categories</h2>
       <%# <div class="d-flex gap-2 align-items-center">
         <i class="fa-solid fa-chevron-right"></i>
       </div> %>
@@ -36,18 +27,19 @@
     </div>
   </div>
   <div class="row gap-2 m-4 col-12">
-    <% @listMovies.each do |movie| %>
+    <% @listMovies.results.each do |movie| %>
       <div class="card col-4" style="width: 18rem;">
-        <img src=<%= movie[:image] %> class="card-img-top" alt="...">
+        <img src=<%= "https://image.tmdb.org/t/p/w500#{movie.poster_path}" %> class="card-img-top" alt="...">
         <div class="card-body">
           <div class="d-flex justify-content-between">
-            <h5 class="card-title text-truncate"><%= movie[:title] %></h5>
-            <h6 class="card-title bg-warning px-2 rounded"><%= movie[:rating] %></h6>
+            <h5 class="card-title text-truncate"><%= movie.original_title %></h5>
+            <h6 class="card-title bg-warning px-2 rounded"><%= movie.vote_average %></h6>
           </div>
-          <p class="card-text custom-text-truncate"><%= movie[:description] %></p>
+          <p class="card-text custom-text-truncate"><%= movie.overview %></p>
           <div class="d-flex justify-content-between align-items-center">
-            <h6><%= movie[:year] %></h6>
-            <a href="#" class="btn btn-info">Rent $0.00</a>
+            <h6><%= movie.release_date[0, 4] %></h6>
+            <%# <a href="#" class="btn btn-info">Rent $0.00</a> %>
+            <%= link_to "more", movie_details_path(movie.id), class:"btn btn-info" %>
           </div>
         </div>
       </div>

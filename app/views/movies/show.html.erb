@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <%= image_tag "https://image.tmdb.org/t/p/w500#{@movie.poster_path}", class: "img-fluid" %>
+    </div>
+    <div class="col-md-6">
+      <h2 class="txt-title"><%= @movie.original_title %></h2>
+      <p class="txt-paragraph"><strong>Rating:</strong> <%= @movie.vote_average.ceil(1) %></p>
+      <p class="txt-paragraph"><strong>Overview:</strong> <%= @movie.overview %></p>
+
+      <p class="txt-paragraph"><strong>Genres:</strong>
+        <% @movie.genres.each do |genre| %>
+          <span class="badge bg-primary"><%= genre.name %></span>
+        <% end %>
+      </p>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <%= image_tag "https://image.tmdb.org/t/p/w500#{@movie.backdrop_path}", class: "img-fluid" %>
+    </div>
+  </div>
+</div>

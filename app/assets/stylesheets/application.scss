@@ -14,6 +14,11 @@
  *= require_self
  */
 
- * {
-    background-color: rgb(26, 26, 26);
- }
+@import "bootstrap";
+
+:root {
+    --bs-body-color: #fff;
+    --bs-body-bg: #202020;
+}
+ 
+
