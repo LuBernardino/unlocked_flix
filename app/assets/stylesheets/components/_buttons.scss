@@ -39,5 +39,49 @@
         background-color: #FF6464;
         color: black;
         font-weight: 600;
+        transform: scale(1.10);
     }
 }
+
+.btn-rent {
+    background-color: none;
+    color: #FF6464;
+    padding: 10px 25px;
+    border: 1px solid #FF6464;
+    border-radius: 8px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 30px;
+    right: 160px;
+
+    transition: all .4s;
+
+    &:hover {
+        background-color: #FF6464;
+        color: black;
+        font-weight: 600;
+        transform: scale(1.10);
+    }
+}
+
+.btn-close {
+    background-color: none;
+    color: #FF6464;
+    padding: 10px 25px;
+    border: 1px solid #FF6464;
+    border-radius: 8px;
+    text-decoration: none;
+    position: absolute;
+    top: 160px;
+    right: 140px;
+
+    transition: all .4s;
+
+    &:hover {
+        background-color: #FF6464;
+        color: black;
+        font-weight: 600;
+        transform: scale(1.10);
+    }
+}
+

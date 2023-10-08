@@ -1,5 +1,5 @@
 <section class="banner">
-  <%= image_tag "banner.jpg", alt: "banner marvel", class:"banner-img" %>
+  <%# <%= image_tag "banner.jpg", alt: "banner marvel", class:"banner-img" %>
 </section>
 <section id="trending">
   <div class="d-flex row justify-content-between p-3">
@@ -39,7 +39,7 @@
           <div class="d-flex justify-content-between align-items-center">
             <h6><%= movie.release_date[0, 4] %></h6>
             <%# <a href="#" class="btn btn-info">Rent $0.00</a> %>
-            <%= link_to "more", movie_details_path(movie.id), class:"btn btn-info" %>
+            <%= link_to "see more", movie_details_path(movie.id), class:"btn btn-info" %>
           </div>
         </div>
       </div>
