@@ -10,7 +10,7 @@
 
         <p class="txt-paragraph"><strong>Genres:</strong>
             <% @movie.genres.each do |genre| %>
-            <span class="badge bg-primary"><%= genre.name %></span>
+                <span class="badge bg-primary"><%= genre.name %></span>
             <% end %>
         </p>
         <%= link_to "Rent $00.00", new_user_registration_path, class:"btn-rent" %>

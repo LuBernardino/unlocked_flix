@@ -1,0 +1,19 @@
+.slick {
+    width: 100vw;
+}
+
+.slick .slide {
+    width: 200px;
+    height: 40px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    color: black;
+}

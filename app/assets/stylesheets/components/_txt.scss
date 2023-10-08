@@ -1,7 +1,22 @@
 .txt-title {
     color: aliceblue;
+    font-size: 20px;
 }
 
 .txt-paragraph {
     color: aliceblue;
+}
+
+.search input {
+    width: 200px;
+    border: 1px solid #FF6464;
+    border-radius: 8px;
+    background: transparent;
+    padding: 5px 10px;
+}
+
+.search span {
+    background-color: #FF6464;
+    color: transparent;
+    cursor: pointer;
 }

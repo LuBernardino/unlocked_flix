@@ -2,29 +2,24 @@
   <%# <%= image_tag "banner.jpg", alt: "banner marvel", class:"banner-img" %>
 </section>
 <section id="trending">
-  <div class="d-flex row justify-content-between p-3">
-    <div class="p-3">
-      <h2 class="p-4 txt-title">Categories</h2>
-      <%# <div class="d-flex gap-2 align-items-center">
-        <i class="fa-solid fa-chevron-right"></i>
-      </div> %>
-    <div>
-    
-    <div>
-      <ul class="d-flex gap-4">
-          <li class="btn-categories">Romance</li>
-          <li class="btn-categories">Science Fiction</li>
-          <li class="btn-categories">Mystery</li>
-          <li class="btn-categories">Adventure</li>
-          <li class="btn-categories">Fantasy</li>
-          <li class="btn-categories">Thriller</li>
-          <li class="btn-categories">Historical Fiction</li>
-          <li class="btn-categories">Dystopian</li>
-          <li class="btn-categories">Biography</li>
-          <li class="btn-categories">Horror</li>
-          <li class="btn-categories">Animation</li>
-      </ul>
+  <div class="d-flex row justify-content-between p-3 m-2">
+    <div class="p-3 d-flex gap-5">
+      <h2 class="txt-title col-md-9">Categories</h2>
+
+      <div class="input-group rounded col-md-3 search">
+        <input type="search" class="" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search" style="color: #202020;"></i>
+        </span>
+      </div>
+
     </div>
+  
+      <ul class="d-flex gap-4 slick">
+        <% @listGenres.genres.each do |genre| %>
+          <li class="btn-categories slide white"><%= genre.name %></li>
+        <% end %>
+      </ul>
   </div>
   <div class="row gap-2 m-4 col-12">
     <% @listMovies.results.each do |movie| %>
