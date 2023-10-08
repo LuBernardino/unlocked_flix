@@ -1,26 +1,53 @@
-<h2>Log in</h2>
+<section class="gradient-form">
+  <div>
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-xl-10">
+        <div class="text-white">
+          <div class="row">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+                <div class="text-center">
+                  <%= image_tag "logo_unlockedflix.png", alt: "logotype", class: "img-fluid mt-1 mb-5 pb-1" %>
+                </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+                <form>
+                  <p>Please login to your account</p>
+
+                  <div class="mb-4">
+                    <%= text_field_tag 'email', nil, class: 'form-control', placeholder: 'Phone number or email address' %>
+                  </div>
+
+                  <div class="mb-4">
+                    <%= password_field_tag 'password', nil, class: 'form-control', placeholder: 'Password' %>
+                  </div>
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <%= button_tag 'Log in', class: 'btn btn-primary btn-block fa-lg gradient-custom-2 mb-3', type: 'button' %>
+                    <%= link_to 'Forgot password?', '#!', class: 'text-muted' %>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">Don't have an account?</p>
+                    <%= button_tag 'Create new', class: 'btn btn-outline-danger', type: 'button' %>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">We are more than just a company</h4>
+                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>
